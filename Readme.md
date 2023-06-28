@@ -1,7 +1,10 @@
 # How to setup powershell themes
+```powershell
 code $Profile
+```
 ## Profile
-
+content of profile:
+```powershell
 Import-Module posh-git
 
 #region conda initialize
@@ -10,7 +13,7 @@ Import-Module posh-git
 
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 oh-my-posh --init --shell pwsh --config C:\Users\Majid.Kamyab\Documents\agnoster.omp.json | Invoke-Expression
-
+```
 
 ## Installation commands
 ```powershell
