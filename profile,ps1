@@ -1,0 +1,27 @@
+
+Import-Module posh-git
+
+ 
+
+#region conda initialize
+
+# (& "C:\Users\Majid.Kamyab\Anaconda3\Scripts\conda.exe" "shell.powershell" "hook") | Out-String | Invoke-Expression
+
+#endregion
+
+ 
+
+# Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+
+oh-my-posh --init --shell pwsh --config C:\oh-my-push-config\agnoster.omp.json | Invoke-Expression
+
+# conda activate ai
+
+New-Alias -Name azd -Value "C:\Users\Majid.Kamyab\AppData\Local\Programs\Azure Dev CLI\azd.exe"
+#region conda initialize
+# !! Contents within this block are managed by 'conda init' !!
+If (Test-Path "C:\Users\majid.kamyab\AppData\Local\anaconda3\Scripts\conda.exe") {
+    (& "C:\Users\majid.kamyab\AppData\Local\anaconda3\Scripts\conda.exe" "shell.powershell" "hook") | Out-String | ?{$_} | Invoke-Expression
+}
+#endregion
+
