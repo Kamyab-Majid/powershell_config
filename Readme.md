@@ -32,6 +32,7 @@ Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy RemoteSigned -Force
 winget install JanDeDobbeleer.OhMyPosh -s winget
 
 winget install --id=Microsoft.WindowsTerminal -e
+Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
 ```
 
 install conda then
