@@ -1,27 +1,29 @@
-
-Import-Module posh-git
-
- 
+# & ([ScriptBlock]::Create((oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json" --print) -join "`n"))
 
 #region conda initialize
-
-# (& "C:\Users\Majid.Kamyab\Anaconda3\Scripts\conda.exe" "shell.powershell" "hook") | Out-String | Invoke-Expression
-
+(& conda "shell.powershell" "hook") | Out-String | Invoke-Expression
 #endregion
 
- 
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+oh-my-posh --init --shell pwsh --config C:\Users\Majid.Kamyab\Documents\agnoster.omp.json | Invoke-Expression
 
-# Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
-
-oh-my-posh --init --shell pwsh --config C:\oh-my-push-config\agnoster.omp.json | Invoke-Expression
-
-# conda activate ai
-
-New-Alias -Name azd -Value "C:\Users\Majid.Kamyab\AppData\Local\Programs\Azure Dev CLI\azd.exe"
-#region conda initialize
-# !! Contents within this block are managed by 'conda init' !!
-If (Test-Path "C:\Users\majid.kamyab\AppData\Local\anaconda3\Scripts\conda.exe") {
-    (& "C:\Users\majid.kamyab\AppData\Local\anaconda3\Scripts\conda.exe" "shell.powershell" "hook") | Out-String | ?{$_} | Invoke-Expression
+# alias gimme-prod='aws sso login --profile prod;export AWS_PROFILE=prod;echo Selected BIPROD Admin Role;export DEPLOYMENT_STAGE=biprod'
+# Set-Alias -Name gimme-prod -Value aws sso login --profile prod;export AWS_PROFILE=prod;echo Selected BIPROD Admin Role;export DEPLOYMENT_STAGE=biprod
+function gimme-prod {
+    aws sso login --profile prod
+    $env:AWS_PROFILE = "prod"
+    Write-Host "Selected BIPROD Admin Role"
+    $env:DEPLOYMENT_STAGE = "biprod"
 }
-#endregion
 
+function gimme-sand {
+    aws sso login --profile bi-sandbox-admin
+    $env:AWS_PROFILE = "bi-sandbox-admin"
+    Write-Host "Selected BISAND Admin Role"
+    $env:DEPLOYMENT_STAGE = "bisand"
+}
+# Add auto complete (requires PSReadline 2.2.0-beta1+ prerelease)
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle ListView
+Set-PSReadLineOption -EditMode Windows
+conda activate nfl
