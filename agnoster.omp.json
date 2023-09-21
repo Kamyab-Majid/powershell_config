@@ -9,8 +9,16 @@
           "style": "powerline",
           "powerline_symbol": "",
           "foreground": "#100e23",
-          "background": "#906cff",
+          "background": "#ffa46c",
           "template": "{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "aws",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "foreground": "#ffffff",
+          "background": "#FFA400",
+          "template": "  {{.Profile}}{{if .Region}}@{{.Region}}{{end}}"
         },
         {
           "background": "#ffe9aa",
@@ -39,7 +47,7 @@
           "style": "powerline",
           "powerline_symbol": "",
           "foreground": "#193549",
-          "background": "#ffeb3b",
+          "background": "#3bff55",
           "background_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}#FFEB3B{{ end }}",
             "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}",
