@@ -17,8 +17,8 @@ function gimme-prod {
 }
 
 function gimme-sand {
-    aws sso login --profile bi-sandbox-admin
-    $env:AWS_PROFILE = "bi-sandbox-admin"
+    aws sso login --profile sand
+    $env:AWS_PROFILE = "sand"
     Write-Host "Selected BISAND Admin Role"
     $env:DEPLOYMENT_STAGE = "bisand"
 }
@@ -26,4 +26,4 @@ function gimme-sand {
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -EditMode Windows
-conda activate nfl
+conda activate cdk
