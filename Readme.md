@@ -17,22 +17,17 @@ oh-my-posh --init --shell pwsh --config C:\Users\Majid.Kamyab\Documents\agnoster
 
 ## Installation commands
 ```powershell
+winget install JanDeDobbeleer.OhMyPosh -s winget
 Install-Module posh-git -Scope CurrentUser -Force
-
-Install-Module posh-git -Scope CurrentUser -Force
-
 Install-Module PowerShellGet -Force -SkipPublisherCheck -Scope CurrentUser
-
+Install-Module -Name Terminal-Icons -Repository PSGallery
+Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
 Import-Module posh-git
 
+Install-Module syntax-highlighting
 Add-PoshGitToProfile -AllHosts
-
 Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy RemoteSigned -Force
-
-winget install JanDeDobbeleer.OhMyPosh -s winget
-
 winget install --id=Microsoft.WindowsTerminal -e
-Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
 ```
 
 install conda then
