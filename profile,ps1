@@ -6,7 +6,8 @@
 
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 oh-my-posh --init --shell pwsh --config C:\Users\Majid.Kamyab\Documents\agnoster.omp.json | Invoke-Expression
-
+Import-Module -Name Terminal-Icons
+Import-Module syntax-highlighting
 # alias gimme-prod='aws sso login --profile prod;export AWS_PROFILE=prod;echo Selected BIPROD Admin Role;export DEPLOYMENT_STAGE=biprod'
 # Set-Alias -Name gimme-prod -Value aws sso login --profile prod;export AWS_PROFILE=prod;echo Selected BIPROD Admin Role;export DEPLOYMENT_STAGE=biprod
 function gimme-prod {
@@ -25,5 +26,6 @@ function gimme-sand {
 # Add auto complete (requires PSReadline 2.2.0-beta1+ prerelease)
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle ListView
-Set-PSReadLineOption -EditMode Windows
+# Set-PSReadLineOption -EditMode Windows
+
 conda activate cdk
