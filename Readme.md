@@ -2,20 +2,17 @@
 ```powershell
 code $Profile
 ```
-## Profile
-content of profile:
-```powershell
-Import-Module posh-git
+put the content of the profile.ps1 in that file
 
-#region conda initialize
-(& "C:\Users\Majid.Kamyab\Anaconda3\Scripts\conda.exe" "shell.powershell" "hook") | Out-String | Invoke-Expression
-#endregion
-
-Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
-oh-my-posh --init --shell pwsh --config C:\Users\Majid.Kamyab\Documents\agnoster.omp.json | Invoke-Expression
-```
 
 ## Installation commands
+Install anaconda and git if you want.
+in order to make conda usable in powerhsell run:
+```
+conda init powershell
+```
+in anaconda prompt. 
+
 ```powershell
 winget install JanDeDobbeleer.OhMyPosh -s winget
 Install-Module posh-git -Scope CurrentUser -Force
