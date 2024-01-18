@@ -12,6 +12,7 @@ in order to make conda usable in powerhsell run:
 conda init powershell
 ```
 in anaconda prompt. 
+then run the following commands in powershell.
 
 ```powershell
 winget install JanDeDobbeleer.OhMyPosh -s winget
