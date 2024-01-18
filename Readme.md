@@ -36,6 +36,4 @@ conda init powershell
 ```
 ## Font
 install and set terminal font to `DejaVuSansM Nerd Font Propo`
-[DejaVuSansM Nerd Font Mono]([https://github.com/cekrem/dotfiles/blob/master/fonts/Meslo%20LG%20L%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.otf](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/DejaVuSansMono.zip)https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/DejaVuSansMono.zip)
-
-
+(MesloLGLDZ Nerd Font Mono)[https://github.com/cekrem/dotfiles/blob/master/fonts/Meslo%20LG%20L%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.otf]
