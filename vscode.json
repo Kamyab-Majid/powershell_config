@@ -1,179 +1,61 @@
 {
   "flake8.args": [
     "--max-line-length=200"
- ],
- "python.analysis.diagnosticSeverityOverrides": {
-  "reportGeneralTypeIssues": "none"
-},
- "pylint.severity": {
-  "W0622": "Hint",
-  "C0301":"Hint"
- },
-
-
+  ],
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportGeneralTypeIssues": "none"
+  },
   "python.analysis.autoImportCompletions": true, // Automatically import modules for completions
   "python.testing.pytestEnabled": true, // Enable pytest for testing (install the extension if needed)
-
   "editor.tabSize": 4, // Set the tab size to 4 spaces
-
   "editor.formatOnSave": true, // Enable auto-formatting on save
-
   "editor.codeActionsOnSave": {
-
-    "source.organizeImports": true // Organize imports on save
-
+    "source.organizeImports": "explicit"
   },
-
   "[python]": {
-
     "editor.defaultFormatter": "ms-python.black-formatter",
-
     "editor.formatOnSave": true
-
   },
-
   "files.exclude": {
-
     "**/__pycache__": true, // Exclude __pycache__ directories from the explorer
-
     "**/*.pyc": true // Exclude .pyc files from the explorer
-
   },
-
   "python.languageServer": "Pylance", // Use Pylance as the language server (install the extension if needed)
-
-  "python.jediEnabled": false,
-
   "remote.SSH.remotePlatform": {
-
     "ec2-3-98-200-236.ca-central-1.compute.amazonaws.com": "linux",
-
     "virginia": "linux",
-
     "ec2-52-6-116-222.compute-1.amazonaws.com": "linux",
-
-    "data_generator": "linux"
-
+    "data_generator": "linux",
+    "mathnasium": "linux"
   },
-
   "python.analysis.completeFunctionParens": true,
-
   "files.autoSave": "afterDelay",
-
   "workbench.colorCustomizations": {},
-
   "editor.maxTokenizationLineLength": 300,
-
   "editor.fontSize": 16,
-
   "git.autofetch": true,
-
   "terminal.integrated.fontFamily": "MesloLGLDZ Nerd Font Mono",
-
   "terminal.integrated.fontSize": 18,
-
   "scm.inputFontSize": 16,
-
   "debug.console.fontSize": 16,
-
   "markdown.preview.fontSize": 16,
-
   "chat.editor.fontSize": 16,
-
   "markdown.preview.lineHeight": 16,
-
-  "workbench.colorTheme": "Darcula Pycharm with Dark GUI",
-
   "workbench.iconTheme": "vscode-icons",
-
-  "tabnine.experimentalAutoImports": true,
-
   "explorer.confirmDragAndDrop": false,
-
-  "aws.suppressPrompts": {
-
-    "codeWhispererConnectionExpired": true
-
-  },
-
-  "aws.codeWhisperer.importRecommendation": false,
-
-  "aws.codeWhisperer.includeSuggestionsWithCodeReferences": false,
-
-  "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
-
-  "sourcery.token": "user_wI2lWbYsiUCQlyR6SC7M9CEz5i3OtOySHGBMY7pCqlmcq3iRoEbXuPEULSA",
-
   "[json]": {
-
     "editor.defaultFormatter": "vscode.json-language-features"
-
   },
-
-  "yaml.customTags": [
-
-    "!And",
-
-    "!And sequence",
-
-    "!If",
-
-    "!If sequence",
-
-    "!Not",
-
-    "!Not sequence",
-
-    "!Equals",
-
-    "!Equals sequence",
-
-    "!Or",
-
-    "!Or sequence",
-
-    "!FindInMap",
-
-    "!FindInMap sequence",
-
-    "!Base64",
-
-    "!Join",
-
-    "!Join sequence",
-
-    "!Cidr",
-
-    "!Ref",
-
-    "!Sub",
-
-    "!Sub sequence",
-
-    "!GetAtt",
-
-    "!GetAZs",
-
-    "!ImportValue",
-
-    "!ImportValue sequence",
-
-    "!Select",
-
-    "!Select sequence",
-
-    "!Split",
-
-    "!Split sequence"
-
-  ],
-  
-
   "terminal.integrated.enableMultiLinePasteWarning": false,
-
   "security.workspace.trust.untrustedFiles": "open",
-
   "terminal.integrated.defaultProfile.linux": "zsh",
-  "explorer.confirmDelete": false // Disable Jedi (used by older Python extensions)
-
+  "explorer.confirmDelete": false,
+  "workbench.colorTheme": "Darcula Pycharm with Dark GUI",
+  "editor.defaultFormatter": "ms-python.black-formatter",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "markdown-pdf.convertOnSave": true,
+  "markdown-pdf.headerTemplate": "",
+  "jupyter.askForKernelRestart": false,
 }
