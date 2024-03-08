@@ -34,7 +34,7 @@ conda init powershell
 ```
 ## Font
 install and set terminal font to 
-(MesloLGLDZ Nerd Font Mono)[https://github.com/cekrem/dotfiles/blob/master/fonts/Meslo%20LG%20L%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.otf]
+(MesloLGLDZ Nerd Font Mono)[[https://github.com/cekrem/dotfiles/blob/master/fonts/Meslo%20LG%20L%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.otf](https://www.nerdfonts.com/)]
 for example to set the terminal font in vscode use:
   `"terminal.integrated.fontFamily": "MesloLGLDZ Nerd Font Mono"`
   in vscode user setting.json. 
